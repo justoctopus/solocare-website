@@ -56,28 +56,69 @@ const Contact = () => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
-
+const FORMSPREE_URL = "https://formspree.io/f/mgovdojl";
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1500));
-    
+
+    try {
+    const res = await fetch(FORMSPREE_URL, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        practiceName: formData.practiceName,
+        message: formData.message,
+      }),
+    });
+
+    const data = await res.json();
+
+    if (!res.ok) throw new Error(data?.error || "Failed to submit");
+
     toast({
       title: "Message Sent!",
       description: "Thank you for reaching out. We'll get back to you within 24 hours.",
     });
-    
-    setFormData({
+      setFormData({
       name: "",
       email: "",
       phone: "",
       practiceName: "",
       message: "",
     });
+  } catch (err: any) {
+    toast({
+      title: "Submission failed",
+      description: err?.message || "Please try again.",
+      variant: "destructive",
+    });
+  } finally {
     setIsSubmitting(false);
+  }
   };
+    // Simulate form submission
+  //   await new Promise((resolve) => setTimeout(resolve, 1500));
+    
+  //   toast({
+  //     title: "Message Sent!",
+  //     description: "Thank you for reaching out. We'll get back to you within 24 hours.",
+  //   });
+    
+  //   setFormData({
+  //     name: "",
+  //     email: "",
+  //     phone: "",
+  //     practiceName: "",
+  //     message: "",
+  //   });
+  //   setIsSubmitting(false);
+  // };
 
   return (
     <NoFooterLayout>
