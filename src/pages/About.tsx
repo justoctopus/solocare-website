@@ -105,12 +105,12 @@ const About = () => {
               <div className="relative grid grid-cols-2 gap-4 p-4">
                 <div className="p-6 rounded-2xl bg-card border border-border shadow-md">
                   <TrendingUp className="w-8 h-8 text-primary mb-3" />
-                  <div className="font-display text-3xl font-bold text-foreground">Dedicated</div>
-                  <div className="text-sm text-muted-foreground">Years of Experience</div>
+                  <div className="font-display text-2xl font-bold text-foreground">Dedicated</div>
+                  <div className="text-sm text-muted-foreground">Team</div>
                 </div>
                 <div className="p-6 rounded-2xl bg-card border border-border shadow-md mt-8">
                   <Users className="w-8 h-8 text-accent mb-3" />
-                  <div className="font-display text-3xl font-bold text-foreground">Multiple</div>
+                  <div className="font-display text-2xl font-bold text-foreground">Multiple</div>
                   <div className="text-sm text-muted-foreground">Practices Served</div>
                 </div>
                 <div className="p-6 rounded-2xl bg-card border border-border shadow-md">
