@@ -43,7 +43,7 @@ const benefits = [
 const stats = [
   { value: "98%", label: "First-Pass Rate" },
   // { value: "Years of", label: "Experience" },
-  {value: "Dedicated", label: "Years of Experience"},
+  {value: "Dedicated", label: "Team"},
   { value: "Multiple", label: "Practices Served" },
   { value: "45%", label: "Avg. Cost Savings" },
 ];
