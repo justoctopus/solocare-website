@@ -106,7 +106,7 @@ const Footer = () => {
                     className="flex items-center gap-3 text-background/70 hover:text-primary transition-colors text-sm"
                   >
                     <Mail className="w-4 h-4 text-primary" />
-                    info@solocare.com
+                    info@solocarehub.com
                   </a>
                 </li>
                 <li className="flex items-start gap-3 text-background/70 text-sm">
