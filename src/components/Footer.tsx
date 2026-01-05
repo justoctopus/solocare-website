@@ -102,7 +102,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href="mailto:info@solocare.com"
+                    href="mailto:info@solocarehub.com"
                     className="flex items-center gap-3 text-background/70 hover:text-primary transition-colors text-sm"
                   >
                     <Mail className="w-4 h-4 text-primary" />
