@@ -24,8 +24,8 @@ const contactInfo = [
   {
     icon: Mail,
     title: "Email",
-    content: "info@solocare.com",
-    href: "mailto:info@solocare.com",
+    content: "info@solocarehub.com",
+    href: "mailto:info@solocarehub.com",
   },
   {
     icon: MapPin,
